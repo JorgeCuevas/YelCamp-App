@@ -17,7 +17,8 @@ var indexRouter = require('./routes/index'),
 
 // seedBD(); seed data base
 //Setting up app
-mongoose.connect("mongodb://localhost/yemp_camp4");
+mongoose.connect("mongodb://george:soygeorge@ds159208.mlab.com:59208/yelp-camp");
+// mongoose.connect("mongodb://localhost/yemp_camp4");
 app.set("view engine", "ejs");
 app.use(require('express-session')({
 	secret : 'there is not way that studing',
