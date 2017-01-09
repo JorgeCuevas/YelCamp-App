@@ -17,8 +17,8 @@ var indexRouter = require('./routes/index'),
 
 // seedBD(); seed data base
 //Setting up app
-
-mongoose.connect(process.env.DATABASEURL);
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp-campv10";
+mongoose.connect(url);
 app.set("view engine", "ejs");
 app.use(require('express-session')({
 	secret : 'there is not way that studing',
